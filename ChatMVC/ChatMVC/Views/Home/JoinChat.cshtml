@@ -1,0 +1,8 @@
+﻿@model ChatMVC.Models.CodeViewModel
+
+@using (Html.BeginForm())
+{
+    <h1>Code:</h1>
+    @Html.TextBoxFor(m=>m.code);
+<input type="submit" value="Join" />
+}

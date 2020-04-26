@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>Use this area to provide additional information.</p>
+
+<script src="~/Scripts/jquery-3.3.1.js"></script>
+
+<script type='text/javascript'>
+
+$(window).on('unload', function() {
+       $.ajax({
+        type: 'GET',
+        url: 'closeGroup',
+           async: false,
+           success: function (response) {
+               console.log("success");
+                       debugger;
+           },
+            error: function (request, status, error) {
+                debugger;
+    }
+       });
+       });
+</script>

@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div style="margin-left:15%; margin-right:15%;">
+    <table>
+        <tr>
+            @if (User.Identity.IsAuthenticated)
+            {
+                <td>
+                    <h1 class="display-1"> Hello @Html.ActionLink(User.Identity.Name, "Contact", "Home")</h1>
+
+                    <hr />
+                    <h4 class="display-4">What are you gonna do <kbd>today?</kbd></h4>
+                    <hr />
+                    <table style="  border-spacing: 15px;border-collapse: separate;">
+                        <tr>
+                            <td>
+                                <a href="~/Home/JoinChat" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Join Chat Group</a>
+                            </td>
+                            <td>
+                                <a href="~/Home/CreateChat" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Create Chat Group</a>
+                            </td>
+                        </tr>
+                    </table>
+
+
+                </td>
+
+
+            }
+            else
+            {
+                <td>
+                    STILL NOT LOGGED
+                </td>
+
+            }
+
+
+            <td align="left">
+                <img src="~/Pictures/mainPic.png" width="1000" height="600" style="float:left" />
+            </td>
+        </tr>
+    </table>
+</div>

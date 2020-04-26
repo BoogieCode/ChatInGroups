@@ -1,0 +1,30 @@
+﻿@model ChatMVC.Models.ParticipantViewModel
+    @{
+        ViewBag.Title = "CreateChat";
+    }
+
+    <h2>CreateChat</h2>
+
+    <p>Add participants: </p>
+    <input id="participantName" />
+    <hr />
+    <ul id="list">
+        <li>
+            item
+        </li>
+    </ul>
+    <button id="addElem">Add</button>
+
+    <script>
+        var i = 1;
+        var list = document.getElementById("list");
+        var add = document.getElementById('addElem');
+
+        add.addEventListener('click', function () {
+            var itemsByTagName = document.getElementsByTagName("li");
+            var name = document.getElementById('participantName').value;
+
+            list.innerHTML += '<li>asdad</li>';
+            debugger;
+        });
+    </script>
